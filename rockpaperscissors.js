@@ -22,25 +22,28 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-    var move=1;
-if (move >null){
-move=move;}
-else if (move===0){
-    move='getinput()';
+    var x=null;
+if (x >null){
+x=x;}
+else if (x===null){
+    x='getinput()';
 }
+
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
     return /* Your Expression */;
+
 }
 
 function getComputerMove(move) {
-    var move=9;
-if (move >null){
-move=move;}
-else if (move===0){
-    move='randomPlay()';
+var x=null;
+if (x >null){
+x=x;}
+else if (x===null){
+    x='randomPlay()';
 }
+
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
@@ -89,6 +92,29 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
+    
+    while(playerWins > 5 && computerWins > 5){
+    var winner=getWinner(getPlayerMove(), getComputerMove());
+    if (winner='player'){
+        playerWins=playerWins + 1;
+        console.log('Player has one this round, Well Done!');
+        console.log ('player chose'+ playerMove + 'while computer chose'+ computerMove);
+console.log('The score is currently'+ playerWins + 'to' + computerWins);
+    }
+    if (winner='computer'){
+        computerWins=ConputerWins +1;
+        console.log('Computer has one this round, Sorry!');
+        console.log ('player chose'+ playerMove + 'while computer chose'+ computerMove);
+console.log('The score is currently'+ playerWins + 'to' + computerWins);
+    }
+    else {console.log ('no change in scores');
+}
+if (playerWins===5){
+    console.log('Player Wins!');
+}
+else {console.log ('Computer Wins!');
+}
+}
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
