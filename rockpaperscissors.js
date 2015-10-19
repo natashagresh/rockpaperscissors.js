@@ -21,13 +21,20 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-function getPlayerMove(move) {
-    var x=null;
-if (x >null){
-x=x;}
-else if (x===null){
-    x='getinput()';
+function getPlayerMove(move) {   
+var move= 'rock' || 'paper' || 'scissors';
+if (move == 'rock'){
+  move='rock';
 }
+  if (move=='paper'){
+      move='paper';
+  }
+  if (move=='scissors'){
+      move='scissors';
+  }
+ else (move=undefined || null);
+      move='getInput()';
+  }
 
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
@@ -37,12 +44,18 @@ else if (x===null){
 }
 
 function getComputerMove(move) {
-var x=null;
-if (x >null){
-x=x;}
-else if (x===null){
-    x='randomPlay()';
+if (move == 'rock'){
+  move='rock';
 }
+  if (move=='paper'){
+      move='paper';
+  }
+  if (move=='scissors'){
+      move='scissors';
+  }
+ else (move=undefined || null);
+      move='randomPlay()';
+  }
 
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
@@ -51,35 +64,35 @@ else if (x===null){
 }
 
 function getWinner(playerMove,computerMove) {
-    var winner;
-    player= 'rock';
-computer='scissors';
- if (player=='rock' && computer == 'scissors'){
-       y='player';
+    var winner= 'rock' || 'paper' || 'scissors';
+    playerMove= 'rock';
+computerMove='scissors';
+ if (playerMove=='rock' && computerMove == 'scissors'){
+       winner='player';
  }
- else if (player=='rock'&& computer == 'paper'){
-       y='computer';
+ else if (playerMove=='rock'&& computerMove == 'paper'){
+       winner='computer';
  }
- else if (player=='rock'&& computer =='rock'){
-     y='tie';
+ else if (playerMove=='rock'&& computerMove =='rock'){
+     winner='tie';
  }
- else if (player=='scissors' && computer=='rock'){
-     y='computer';
+ else if (playerMove=='scissors' && computerMove=='rock'){
+     winner='computer';
  }
- else if (player=='scissors' && computer=='paper'){
-     y='player';
+ else if (playerMove=='scissors' && computerMove=='paper'){
+     winner='player';
  }
- else if (player=='scissors' && computer == 'scissors'){
-     y='tie';
+ else if (playerMove=='scissors' && computerMove == 'scissors'){
+     winner='tie';
  }
- else if (player=='paper' && computer== 'rock'){
-     y='player';
+ else if (playerMove=='paper' && computerMove== 'rock'){
+     winner='player';
  }
- else if (player=='paper' && computer == 'scissors'){
-     y='computer';
+ else if (playerMove=='paper' && computerMove == 'scissors'){
+     winner='computer';
  }
- else if (player == 'paper' && computer == 'paper'){
-     y='tie';
+ else if (playerMove == 'paper' && computerMove == 'paper'){
+     winner='tie';
  }
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
@@ -98,21 +111,17 @@ function playToFive() {
     if (winner='player'){
         playerWins=playerWins + 1;
         console.log('Player has one this round, Well Done!');
-        console.log ('player chose'+ playerMove + 'while computer chose'+ computerMove);
-console.log('The score is currently'+ playerWins + 'to' + computerWins);
     }
     if (winner='computer'){
         computerWins=ConputerWins +1;
         console.log('Computer has one this round, Sorry!');
-        console.log ('player chose'+ playerMove + 'while computer chose'+ computerMove);
-console.log('The score is currently'+ playerWins + 'to' + computerWins);
     }
     else {console.log ('no change in scores');
 }
-if (playerWins===5){
+ if (playerWins===5){
     console.log('Player Wins!');
 }
-else {console.log ('Computer Wins!');
+ else {console.log ('Computer Wins!');
 }
 }
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
